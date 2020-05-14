@@ -1,0 +1,19 @@
+package com.sboot.security;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.env.Environment;
+import org.springframework.stereotype.Component;
+
+
+@Component
+public class AddApplication {
+	
+	@Autowired
+	public Environment env;
+	
+	public String getApplicationToken() {
+		return env.getProperty("applicationtoken");
+	}
+	
+
+}
